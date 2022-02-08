@@ -16,6 +16,6 @@ app.use('/api/v1/classrooms', classroomsRoute);
 require('./Middleware/sentry')(app);
 
 app.listen(port, async () =>{
-    await db("mongodb+srv://saaya:3737@nodeexpressproject.dvaec.mongodb.net/issatso?retryWrites=true&w=majority");
+    await db("");
     console.log(`listening on port ${port}`);
 })

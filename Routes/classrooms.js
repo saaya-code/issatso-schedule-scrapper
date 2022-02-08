@@ -56,7 +56,7 @@ router.patch("/do", async(req, res)=>{
     })
 
   }
-  console.log(classroomsMap)
+  
   res.status(200).json({"status":"ok"})
 })
 
