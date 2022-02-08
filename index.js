@@ -1,5 +1,5 @@
 const express = require('express');
-
+const db = require("./Startup/db")
 const majorsRoute = require('./Routes/majors');
 const classroomsRoute = require('./Routes/classrooms');
 const port = process.env.PORT || 3000;
@@ -15,4 +15,7 @@ app.use('/api/v1/classrooms', classroomsRoute);
 
 require('./Middleware/sentry')(app);
 
-app.listen(port, () => console.log(`listening on port ${port}`));
+app.listen(port, async () =>{
+    await db("mongodb+srv://saaya:3737@nodeexpressproject.dvaec.mongodb.net/issatso?retryWrites=true&w=majority");
+    console.log(`listening on port ${port}`);
+})

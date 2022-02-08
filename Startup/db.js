@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 const config = require('config');
 
-module.exports = function () {
+module.exports = function (url) {
   mongoose
-    .connect(config.get('DB_URL'), {
+    .connect(url, {
       useNewUrlParser: true,
       useUnifiedTopology: true
     })

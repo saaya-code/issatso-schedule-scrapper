@@ -1,4 +1,4 @@
 {
-  "DB_URL": "mongodb://localhost:27017/issatso-majors-db",
+  "DB_URL": "mongodb+srv://saaya:3737@nodeexpressproject.dvaec.mongodb.net/storeAPI?retryWrites=true&w=majority",
   "SCRAPING_CRON": "59 23 * * 5"
 }
